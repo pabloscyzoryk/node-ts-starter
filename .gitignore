@@ -76,7 +76,6 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -134,8 +133,11 @@ dist
 
 # custom added ignores below
 bundle
-dist
 node_modules
 TODO
-draft
-pnpm-common.txt
+
+# UNCOMMENT THESE BEFORE YOUR COMMIT
+#dist
+#draft
+#pnpm-common.txt
+#.env

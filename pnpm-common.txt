@@ -1,0 +1,14 @@
+// common pnpm commands i use
+
+// client
+pnpm add @supabase/supabase-js
+pnpm add socket.io-client
+
+// server
+pnpm add express
+pnpm add socket-io
+pnpm add prisma --save-dev
+pnpm add @prisma/client
+
+prisma init
+prisma generate
