@@ -136,8 +136,9 @@ bundle
 node_modules
 TODO
 
-# UNCOMMENT THESE BEFORE YOUR COMMIT
+# UNCOMMENT THESE BEFORE YOUR PUSH
 #dist
 #draft
 #pnpm-common.txt
 #.env
+#package

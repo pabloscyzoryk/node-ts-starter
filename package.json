@@ -15,11 +15,16 @@
     "format-check": "prettier . --check",
     "lint-check": "eslint .",
     "lint": "eslint . --fix",
-    "clean": "rimraf dist",
+    "clean-dist": "rimraf dist",
+    "clean-exe": "rimraf package",
     "build": "babel src --extensions \".ts\" --out-dir dist",
     "build-w": "babel src --extensions \".ts\" --out-dir dist --watch",
     "build-h": "npm install && babel src --extensions \".ts\" --out-dir dist",
-    "dev": "nodemon --quiet ./dist/index.js --no-experimental-fetch"
+    "dev": "nodemon --quiet ./dist/index.js --no-experimental-fetch",
+    "make": "npx pkg -o ./package/app.exe .",
+    "debug": "npx pkg --debug --log=verbose -o ./package/app.exe .",
+    "app": "start ./package/app.exe",
+    "start": "node dist/index.js"
   },
   "keywords": [
     "ts",

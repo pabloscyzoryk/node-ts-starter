@@ -1,4 +1,4 @@
-// common pnpm commands i use
+// common pnpm commands i use:
 
 // client
 pnpm add @supabase/supabase-js
