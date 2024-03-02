@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-typescript",
+    "minify"
+  ],
+  "plugins": ["babel-plugin-loop-optimizer", "preval"]
+}

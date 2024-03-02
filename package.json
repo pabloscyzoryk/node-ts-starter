@@ -1,0 +1,54 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "project-description",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "typings": "dist/src/index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%project-repository%"
+  },
+  "scripts": {
+    "format": "prettier . --write",
+    "format-check": "prettier . --check",
+    "lint-check": "eslint .",
+    "lint": "eslint . --fix",
+    "clean": "rimraf dist",
+    "build": "babel src --extensions \".ts\" --out-dir dist",
+    "build-w": "babel src --extensions \".ts\" --out-dir dist --watch"
+  },
+  "keywords": [
+    "ts",
+    "typescript",
+    "node",
+    "nodejs"
+  ],
+  "author": "project-author",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@8.15.4",
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.24",
+    "@types/nodemon": "^1.19.6",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "babel-plugin-preval": "^5.1.0",
+    "babel-preset-minify": "^0.5.2",
+    "esbuild": "^0.20.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "glob": "^10.3.10",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
