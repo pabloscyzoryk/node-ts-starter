@@ -2,7 +2,7 @@
   "name": "project-name",
   "version": "1.0.0",
   "description": "project-description",
-  "main": "dist/index.js",
+  "main": "index.js",
   "bin": "dist/index.js",
   "typings": "dist/src/index.d.ts",
   "type": "module",
@@ -17,7 +17,9 @@
     "lint": "eslint . --fix",
     "clean": "rimraf dist",
     "build": "babel src --extensions \".ts\" --out-dir dist",
-    "build-w": "babel src --extensions \".ts\" --out-dir dist --watch"
+    "build-w": "babel src --extensions \".ts\" --out-dir dist --watch",
+    "build-h": "npm install && babel src --extensions \".ts\" --out-dir dist",
+    "dev": "nodemon --quiet ./dist/index.js --no-experimental-fetch"
   },
   "keywords": [
     "ts",
@@ -27,6 +29,10 @@
   ],
   "author": "project-author",
   "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/project-author/project-repository/issues"
+  },
+  "homepage": "https://github.com/project-author/project-repository/#readme",
   "packageManager": "pnpm@8.15.4",
   "devDependencies": {
     "@babel/cli": "^7.23.9",
@@ -46,9 +52,25 @@
     "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.10",
     "nodemon": "^3.1.0",
+    "pkg": "^5.8.1",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "assets": [
+      ".env"
+    ],
+    "targets": [
+      "node18-win"
+    ],
+    "outputPath": "./package/"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "figlet": "^1.7.0",
+    "find-config": "^1.0.0"
   }
 }

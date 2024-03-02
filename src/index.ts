@@ -1,8 +1,7 @@
 // imports
-import { hello } from './hello.js';
 
 const main = async () => {
-  hello();
+  console.log('Hello, world!');
 };
 
-main();
+async () => await main();
